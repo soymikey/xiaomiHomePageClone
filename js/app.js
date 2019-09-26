@@ -195,3 +195,86 @@
 // bar.call2(obj,12,234)
 
 
+// 去重
+function unique(array) {
+    let newArray = array.filter((item, index, array) => {
+        return array.indexOf(item) === index
+    })
+    return newArray
+}
+const array = [3, 4, 2, 1, 2, 1, 2, 3, 4, 5, 6, 7, 5, 54, 4, 3, 2]
+
+console.log(unique(array));
+
+//排序
+function getMin(array) {
+    let min = array[0]
+    for (const num of array) {
+        if (num < min) {
+            min = num
+        }
+    }
+    array.splice(array.indexOf(min), 1)
+    return min
+}
+let newArray = []
+const length = array.length
+for (let i = 0; i < length; i++) {
+    newArray.push(getMin(array))
+}
+console.log(newArray);
+
+//继承 prototype
+function Parent(name) {
+    this.name = name
+}
+Parent.prototype.print = function () {
+    console.log('my name is ' + this.name);
+
+}
+const p1 = new Parent('p1')
+console.log(p1.name);
+p1.print()
+
+function Child(name) {
+    Parent.call(this, name)
+    this.age = 20
+}
+Child.prototype = new Parent()
+const c1 = new Child('c1')
+
+console.log(c1.age, c1.name);
+c1.print()
+
+// 手写call/apply function
+Function.prototype.call2 = function (content) {
+    content = content || window
+    content.fn = this
+    let arg = []
+    for (var i = 1; i < arguments.length; i++) {
+        arg.push(arguments[i])
+    }
+    content.fn(...arg)
+    delete content.fn
+}
+
+
+
+function f1() {
+    console.log(this.name)
+}
+const obj = {
+    name: 'michael'
+}
+f1.call2(obj)
+
+function Name() {
+    this.age = 20
+   
+}
+Name.prototype.print=function(){
+    return this.age
+}
+
+
+

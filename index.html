@@ -5,7 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .swiper-button-prev {
+      left: 244px;
+    }
+  </style>
   <title>小米官方</title>
 </head>
 
@@ -13,8 +29,31 @@
   <div class="header">
     <div class="header-container">
       <div class="header-left">
+        <ul>
+          <li>小米商城<span class="marker">|</span></li>
+          <li>MIUI<span class="marker">|</span></li>
+          <li>IoT<span class="marker">|</span></li>
+          <li>云服务<span class="marker">|</span></li>
+          <li>金融<span class="marker">|</span></li>
+          <li>有品<span class="marker">|</span></li>
+          <li>小爱开放平台<span class="marker">|</span></li>
+          <li>企业团购<span class="marker">|</span></li>
+          <li>资质证照<span class="marker">|</span></li>
+          <li>协议规则<span class="marker">|</span></li>
+          <li>下载app<span class="marker">|</span></li>
+          <li>Select Location</li>
+        </ul>
       </div>
       <div class="header-right">
+
+        <ul>
+          <li>登录<span class="marker">|</spanmar>
+              </l>
+          <li>注册<span class="marker">|</span></li>
+          <li>息通知<span class="marker">|</span></li>
+          <li>购物车</li>
+        </ul>
+
       </div>
     </div>
 
@@ -26,30 +65,159 @@
         <img src="./image/logo.png" alt="">
       </div>
       <div class="top-top-nav">
-       <ul>
-         <li>小米手机</li>
-         <li>Redmi 红米</li> 
-         <li>电视</li>
-         <li>笔记本</li>
-         <li>家电</li>
-         <li>路由器</li>
-         <li>智能硬件</li>
-         <li>服务</li>
-         <li>社区</li>
-       </ul>
+        <ul>
+          <li>小米手机</li>
+          <li>Redmi 红米</li>
+          <li>电视</li>
+          <li>笔记本</li>
+          <li>家电</li>
+          <li>路由器</li>
+          <li>智能硬件</li>
+          <li>服务</li>
+          <li>社区</li>
+        </ul>
       </div>
-      <div class="search-bar">search bar</div>
+      <div class="search-bar">小米音箱</div>
     </div>
     <div class="top-middle">
       <div class="top-middle-banner">
-        <img src="./image/swiper1.webp" alt="swiper" />
+        <div class="swiper-container">
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="swiper-slide-image" src="./image/swiper1.webp" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-slide-image" src="./image/swiper2.webp" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-slide-image" src="./image/swiper3.webp" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-slide-image" src="./image/swiper4.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-slide-image" src="./image/swiper5.webp" alt=""></div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
         <div class="top-middle-nav">
-          top-middle-nav
+          <ul id='category-ul'>
+            <li>手机 电话卡 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>电视 盒子 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>笔记本 平板 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>家电 插线板 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>出行 穿戴 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>智能 路由器 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>电源 配件 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>健康 儿童 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>耳机 音箱 <img class="arrow" src="./image/arrow.png" alt=""></li>
+            <li>生活 箱包 <img class="arrow" src="./image/arrow.png" alt=""></li>
+          </ul>
+          <div class="category-item-wrapper">
+
+            <ul>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>Realme 红米电视机</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>Realme 红米电视机</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>Realme 红米电视机</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>Realme 红米电视机</span>
+              </li>
+              
+            </ul>
+            <ul>
+                <li>
+                  <img src="./image/categoryItem.webp" alt="">
+  
+                  <span>小米9 Pro 5G</span>
+                </li>
+                <li>
+                  <img src="./image/categoryItem.webp" alt="">
+  
+                  <span>小米9 Pro 5G</span>
+                </li>
+                <li>
+                  <img src="./image/categoryItem.webp" alt="">
+  
+                  <span>小米9 Pro 5G</span>
+                </li>
+                <li>
+                  <img src="./image/categoryItem.webp" alt="">
+  
+                  <span>小米9 Pro 5G</span>
+                </li>
+              
+              </ul>
+              <ul>
+                  <li>
+                    <img src="./image/categoryItem.webp" alt="">
+    
+                    <span>小米9 Pro 5G</span>
+                  </li>
+                  <li>
+                    <img src="./image/categoryItem.webp" alt="">
+    
+                    <span>小米9 Pro 5G</span>
+                  </li>
+                  <li>
+                    <img src="./image/categoryItem.webp" alt="">
+    
+                    <span>小米9 Pro 5G</span>
+                  </li>
+                  <li>
+                    <img src="./image/categoryItem.webp" alt="">
+    
+                    <span>小米9 Pro 5G</span>
+                  </li>
+                
+                </ul>
+           
+          </div>
+
+
         </div>
       </div>
     </div>
     <div class="top-bottom">
-      <div class="top-bottom-left"></div>
+      <div class="top-bottom-left">
+        <ul>
+          <!-- <img src="./image/icon.png" alt=""> -->
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          <li>
+            <img src="./image/icon.png" alt="">
+            <p>小米秒杀</p>
+          </li>
+          
+
+        </ul>
+      </div>
       <div class="top-bottom-right">
         <ul>
           <li><img src="./image/recommend1.jpg" alt=""></li>
@@ -63,8 +231,19 @@
     <div class="flash-section">
       <div class="flash-section-title">小米闪购</div>
       <div class="flash-section-title-right">小米闪购</div>
+      <div style="clear:both"></div>
       <div class="flash-section-recommend">
-        <div class="flash-section-recommend-left">flash-section-recommend-left</div>
+        <div class="flash-section-recommend-left">
+          <p>14:00场</p>
+
+          <img src="./image/thunder.png" alt="">
+          <p>距离结束还有</p>
+          <div>
+            <span>02</span>
+            <span>12</span>
+            <span>24</span>
+          </div>
+        </div>
         <div class="flash-section-recommend-right">
           <ul>
             <li>
@@ -854,25 +1033,144 @@
   <div class="bottom">
     <div class="bottom-top">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li>预约维修服务</li>
+        <li>7天无理由退货</li>
+        <li>15天免费换货</li>
+        <li>满150元包邮</li>
+        <li>520余家售后网点</li>
+
       </ul>
     </div>
     <div class="bottom-bottom">
-      <div class="bottom-bottom-left">1111</div>
-      <div class="bottom-bottom-right"></div>
+      <div class="bottom-bottom-left">
+        <ul>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul class="bottom-bottom-left-ul">
+              <li>帮助中心</li>
+              <li>账户管理</li>
+              <li>购物指南</li>
+              <li>订单操作</li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-bottom-right">
+        <p>400-100-5678</p>
+        <p>周一至周日 8:00-18:00</p>
+        <p>（仅收市话费）</p>
+        <div class='customer-service'>
+          人工服务
+        </div>
+      </div>
     </div>
 
 
 
   </div>
-  <div class="footer">
-    <div class="footer-right"></div>
-  </div>
+
 </body>
-<script src="./app.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper({
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    el: '.swiper-container',
+    initialSlide: 1,
+    slidesPerView: 1,
+    centeredSlides: true,
+    slideToClickedSlide: true,
+    grabCursor: true,
+
+    mousewheel: {
+      enabled: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+</script>
+<script>
+  const categoryUlElement = document.getElementById('category-ul')
+  const topMiddleNav = document.getElementsByClassName('top-middle-nav')[0]
+  const categoryItemWrapper = document.getElementsByClassName('category-item-wrapper')[0]
+  categoryUlElement.addEventListener('mouseover', event => {
+    if (event.target.nodeName === 'LI') {
+      let index = Array.prototype.indexOf.call(categoryUlElement.children, event.target);
+      showCategotyDetails(index)
+    }
+  }
+  )
+  topMiddleNav.addEventListener('mouseout', event => {
+    console.log('ouit');
+
+    Array.prototype.forEach.call(categoryItemWrapper.children, function (el) {
+      el.style.display = 'none'
+    });
+  }
+  )
+
+  function showCategotyDetails(index) {
+    categoryItemWrapper.children[index].style.display = 'block'
+
+  }
+</script>
 
 </html>
