@@ -163,6 +163,7 @@ height: 100%;
     top: 0;
     background-color: #fff;
    
+   
 }
 .category-item-wrapper>ul li{
     width: 265px;
@@ -171,6 +172,10 @@ height: 100%;
         font-size: 0;
         line-height: 76px;
         color: #333;
+
+    }
+    .category-item-wrapper>ul li:hover{
+        background-color: #007AFF;
     }
     .category-item-wrapper>ul img{
         height: 40px;
