@@ -1,4 +1,3 @@
-
 // Function.prototype.call2=function(content){
 //     content.fn=this
 //     let args=[]
@@ -20,7 +19,6 @@
 //     name:'michael'
 // }
 // bar.call2(obj,1,2,3,4)
-
 
 // function Parent(){
 //     this.name='michael'
@@ -46,8 +44,6 @@
 // const c1= new Child(20,'male')
 // console.log(c1);
 // c1.getName()
-
-
 
 // Function.prototype.apply2=function(content){
 //     content=content||window
@@ -82,8 +78,6 @@
 //         resolve();
 //     }, 1000 * i);
 // });
-
-
 
 // for (var i = 0; i < 5; i++) {
 //     task.push(output(i))
@@ -179,10 +173,6 @@
 //     delete content.fn
 // }
 
-
-
-
-
 // function bar(age,num) {
 //     console.log(age)
 //     console.log(num)
@@ -193,88 +183,115 @@
 //     name: 'michale'
 // }
 // bar.call2(obj,12,234)
+//////////////////////////////=====================================================
+// function unique(array) {
+//   let newArray = array.filter((item, index, array) => {
+//     return array.indexOf(item) === index;
+//   });
+//   return newArray;
+// }
+// const array = [3, 4, 2, 1, 2, 1, 2, 3, 4, 5, 6, 7, 5, 54, 4, 3, 2];
 
+// console.log(unique(array));
 
-// 去重
-function unique(array) {
-    let newArray = array.filter((item, index, array) => {
-        return array.indexOf(item) === index
-    })
-    return newArray
+// //排序
+// function getMin(array) {
+//   let min = array[0];
+//   for (const num of array) {
+//     if (num < min) {
+//       min = num;
+//     }
+//   }
+//   array.splice(array.indexOf(min), 1);
+//   return min;
+// }
+// let newArray = [];
+// const length = array.length;
+// for (let i = 0; i < length; i++) {
+//   newArray.push(getMin(array));
+// }
+// console.log(newArray);
+
+// //继承 prototype
+// function Parent(name) {
+//   this.name = name;
+// }
+// Parent.prototype.print = function() {
+//   console.log("my name is " + this.name);
+// };
+// const p1 = new Parent("p1");
+// console.log(p1.name);
+// p1.print();
+
+// function Child(name) {
+//   Parent.call(this, name);
+//   this.age = 20;
+// }
+// Child.prototype = new Parent();
+// const c1 = new Child("c1");
+
+// console.log(c1.age, c1.name);
+// c1.print();
+
+// // 手写call/apply function
+// Function.prototype.call2 = function(content) {
+//   content = content || window;
+//   content.fn = this;
+//   let arg = [];
+//   for (var i = 1; i < arguments.length; i++) {
+//     arg.push(arguments[i]);
+//   }
+//   content.fn(...arg);
+//   delete content.fn;
+// };
+
+// function f1() {
+//   console.log(this.name);
+// }
+// const obj = {
+//   name: "michael"
+// };
+// f1.call2(obj);
+
+// function Name() {
+//   this.age = 20;
+// }
+// Name.prototype.print = function() {
+//   return this.age;
+// };
+
+//去重
+const array = [1, 2, 3, 4, 32, 2, 1, 1, 3, 4, 5, 6];
+
+const newArray = [];
+for (const item of array) {
+  if (newArray.indexOf(item) === -1) {
+    newArray.push(item);
+  }
 }
-const array = [3, 4, 2, 1, 2, 1, 2, 3, 4, 5, 6, 7, 5, 54, 4, 3, 2]
-
-console.log(unique(array));
-
-//排序
-function getMin(array) {
-    let min = array[0]
-    for (const num of array) {
-        if (num < min) {
-            min = num
-        }
+console.log("newArray", newArray);
+function bubbleSort(array) {
+  const len = array.length;
+  for (i = 0; i < len + 1; i++) {
+    for (j = 0; j < len + 1 - i; j++) {
+      if (array[j] < array[[j - 1]]) {
+        [array[j], array[j - 1]] = [array[j - 1], array[j]];
+      }
     }
-    array.splice(array.indexOf(min), 1)
-    return min
-}
-let newArray = []
-const length = array.length
-for (let i = 0; i < length; i++) {
-    newArray.push(getMin(array))
-}
-console.log(newArray);
-
-//继承 prototype
-function Parent(name) {
-    this.name = name
-}
-Parent.prototype.print = function () {
-    console.log('my name is ' + this.name);
-
-}
-const p1 = new Parent('p1')
-console.log(p1.name);
-p1.print()
-
-function Child(name) {
-    Parent.call(this, name)
-    this.age = 20
-}
-Child.prototype = new Parent()
-const c1 = new Child('c1')
-
-console.log(c1.age, c1.name);
-c1.print()
-
-// 手写call/apply function
-Function.prototype.call2 = function (content) {
-    content = content || window
-    content.fn = this
-    let arg = []
-    for (var i = 1; i < arguments.length; i++) {
-        arg.push(arguments[i])
-    }
-    content.fn(...arg)
-    delete content.fn
+  }
+  return array;
 }
 
+// function bubbleSort(arr) {
+//   var len = arr.length;
+//   for (let i = 0; i < len; i++) {
+//     for (let j = 0; j < len - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
-
-function f1() {
-    console.log(this.name)
-}
-const obj = {
-    name: 'michael'
-}
-f1.call2(obj)
-
-function Name() {
-    this.age = 20
-   
-}
-Name.prototype.print=function(){
-    return this.age
-}
-
-
-
+console.log("bubbleSort", bubbleSort(newArray));

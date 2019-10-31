@@ -68,9 +68,12 @@
         <ul>
           <li>小米手机</li>
           <li>Redmi 红米</li>
-          <li>电视</li>
+          <li>电视
+
+            
+          </li>
           <li>笔记本</li>
-          <li>家电</li>
+ <li>家电</li>
           <li>路由器</li>
           <li>智能硬件</li>
           <li>服务</li>
@@ -131,55 +134,55 @@
 
                 <span>Realme 红米电视机</span>
               </li>
-              
+
             </ul>
             <ul>
-                <li>
-                  <img src="./image/categoryItem.webp" alt="">
-  
-                  <span>小米9 Pro 5G</span>
-                </li>
-                <li>
-                  <img src="./image/categoryItem.webp" alt="">
-  
-                  <span>小米9 Pro 5G</span>
-                </li>
-                <li>
-                  <img src="./image/categoryItem.webp" alt="">
-  
-                  <span>小米9 Pro 5G</span>
-                </li>
-                <li>
-                  <img src="./image/categoryItem.webp" alt="">
-  
-                  <span>小米9 Pro 5G</span>
-                </li>
-              
-              </ul>
-              <ul>
-                  <li>
-                    <img src="./image/categoryItem.webp" alt="">
-    
-                    <span>小米9 Pro 5G</span>
-                  </li>
-                  <li>
-                    <img src="./image/categoryItem.webp" alt="">
-    
-                    <span>小米9 Pro 5G</span>
-                  </li>
-                  <li>
-                    <img src="./image/categoryItem.webp" alt="">
-    
-                    <span>小米9 Pro 5G</span>
-                  </li>
-                  <li>
-                    <img src="./image/categoryItem.webp" alt="">
-    
-                    <span>小米9 Pro 5G</span>
-                  </li>
-                
-                </ul>
-           
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+
+            </ul>
+            <ul>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+              <li>
+                <img src="./image/categoryItem.webp" alt="">
+
+                <span>小米9 Pro 5G</span>
+              </li>
+
+            </ul>
+
           </div>
 
 
@@ -214,7 +217,7 @@
             <img src="./image/icon.png" alt="">
             <p>小米秒杀</p>
           </li>
-          
+
 
         </ul>
       </div>
@@ -1086,7 +1089,6 @@
               <li>账户管理</li>
               <li>购物指南</li>
               <li>订单操作</li>
-dsgdsgdsg
             </ul>
           </li>
           <li>
@@ -1095,7 +1097,8 @@ dsgdsgdsg
               <li>账户管理</li>
               <li>购物指南</li>
               <li>订单操作</li>
-gdsfgdfgf
+
+              
             </ul>
           </li>
         </ul>
@@ -1116,6 +1119,7 @@ gdsfgdfgf
 
 </body>
 <script src="js/app.js"></script>
+<script src="js/node.js"></script>
 
 <script src="js/swiper.min.js"></script>
 <script>
@@ -1151,26 +1155,33 @@ gdsfgdfgf
   const categoryUlElement = document.getElementById('category-ul')
   const topMiddleNav = document.getElementsByClassName('top-middle-nav')[0]
   const categoryItemWrapper = document.getElementsByClassName('category-item-wrapper')[0]
+  function hideAllCategoryItemWrapper() {
+    Array.prototype.forEach.call(categoryItemWrapper.children, function (el) {
+      el.style.display = 'none'
+    });
+  }
   categoryUlElement.addEventListener('mouseover', event => {
     if (event.target.nodeName === 'LI') {
+
+
       let index = Array.prototype.indexOf.call(categoryUlElement.children, event.target);
       showCategotyDetails(index)
     }
   }
   )
-  topMiddleNav.addEventListener('mouseout', event => {
-    console.log('ouit');
-
-    Array.prototype.forEach.call(categoryItemWrapper.children, function (el) {
-      el.style.display = 'none'
-    });
+  topMiddleNav.addEventListener('mouseleave', event => {
+    hideAllCategoryItemWrapper()
   }
   )
 
+
   function showCategotyDetails(index) {
-    categoryItemWrapper.children[index].style.display = 'block'
+    hideAllCategoryItemWrapper()
+    categoryItemWrapper.children[index] ? categoryItemWrapper.children[index].style.display = 'block' : null
 
   }
+  hideAllCategoryItemWrapper()
+
 </script>
 
 </html>
